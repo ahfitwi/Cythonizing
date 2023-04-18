@@ -10,3 +10,4 @@
 
 ### Calling Python From C/C++
 - https://docs.python.org/2/extending/extending.html#calling-python-functions-from-c
+- https://www.youtube.com/watch?v=ndLqg4RYcXE
