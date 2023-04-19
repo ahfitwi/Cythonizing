@@ -1,3 +1,5 @@
+- https://app.programiz.pro/course/learn-cpp-basics/variables?page=9
+- 
 # TOC
 1. Introduction
 2. Control Flow
