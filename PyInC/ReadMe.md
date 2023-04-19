@@ -2,6 +2,7 @@ https://www.youtube.com/watch?v=45TOazYbedI
 https://www.youtube.com/watch?v=nHEF1epuuco
 
 https://www.youtube.com/watch?v=a65JdvOaygM
+https://www.youtube.com/watch?v=eEZOjojVgv4
 
 # Extending Python With C
 - On WIndows, use MingW
