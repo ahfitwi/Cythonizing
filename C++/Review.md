@@ -10,6 +10,13 @@
 
 # 1. Introduction
 ### 1.1 Getting Started
+
+      #include <iostream>
+      using namespace std;
+      int main() {
+        cout << "Hello World!";
+        return 0;
+      }
 ### 1.2 Numbers & Text
 ### 1.3 Comments
 ### 1.4 Variables
