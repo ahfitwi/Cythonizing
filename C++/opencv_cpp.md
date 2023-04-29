@@ -71,4 +71,21 @@
         - cout<<"R numpy "<<endl<<format(R, "numpy")<<endl<<endl;
         - cout<<"R csv"<<endl<<format(R, "csv")<<endl<<endl;
         - cout<<"R c"<<endl<<format(R, "c")<<endl<<endl;
+# Vector Methods:
+    ### Modifiers:
+        - push_back(val) --> add e/t
+        - pop_back() --> pop last e/t
+        - insert(idx, val)
+        - erase(): v.erase(), remove every e/t, v={}
+        - clear() --> vector.clear(), deletes all e/ts, --> vector = {}
+        - swap()
+        - assign() --> vector.assign(val1, val2, ...
+    ### Iterators:
+        - begin(): for(auto a=begin(); a!=end();a++){...}
+        - end():
+    ### Capacity:
+        - size(): v.size()
+        - max_size(): v.max_size()
+        - capacity(): v.capacity()
+        - empty(): v.empty()
     
