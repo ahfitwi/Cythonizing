@@ -118,12 +118,12 @@
     - Back into a vector:corps_tmp[i].assign(std::begin(corpX), std::end(corpX));
     
     
-    #include<iostream>
-#include<valarray>
-#include<vector>
+                    #include<iostream>
+                    #include<valarray>
+                    #include<vector>
 
 
-using namespace std;
+                    using namespace std;
 
                     int main()
                     {
