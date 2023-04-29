@@ -51,4 +51,24 @@
         retturn 0
     }
   
-2. 
+# Basic Image Container In OPenCV C++
+    - https://www.youtube.com/watch?v=1tibU7vGWpk
+    - #include<opencv2/core/cre.hpp>
+    - cv::Mat M(2,2, CV_8UC(2): using constructor
+    - M.creat(3,3, CU_8UC(2))
+    - int sz[2] = {2,2,2};
+        Mat L(3,lz, _8UC(1), Scalar::all(0)); cannot be printed by cc<<
+    - Mat E = Nat::eye(4,4, CV_64F);
+    - Mat O = Mat:: O4,4, CV_64F);
+    - Mat Z = Mat::zeros(3,3, CV_8UC1);
+    - Mat C = (Mat_<double>(3,3)<<0,1,2,3,4,5,6,7,8);
+    - Mat RowClone = C.row(1).clone();
+    - Mat R = Mat(3,2,CV_8UC3);
+        randu(R, Scalar::all(0), Scalar::all(255));
+    - Printing:
+        - cout<<"R default"<<endl<<R<<endl;
+        - cout<<"R python "<<endl<<format(R, "python")<<endl<<endl;
+        - cout<<"R numpy "<<endl<<format(R, "numpy")<<endl<<endl;
+        - cout<<"R csv"<<endl<<format(R, "csv")<<endl<<endl;
+        - cout<<"R c"<<endl<<format(R, "c")<<endl<<endl;
+    
