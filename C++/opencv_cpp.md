@@ -78,6 +78,18 @@
             Mat src(100, 100, CV_32FC1, data);
             src.release(); // will not free memory
             delete [] data;
+    - **reduce**:
+        #include "iostream"
+        #include "opencv2/core/core.hpp"
+        #include "opencv2/core/core_c.h"
+        cv::Mat gg;
+        cv::reduce(testMat, gg, 0, CV_REDUCE_SUM, CV_64FC1);
+        CV_REDUCE_SUM, CV_REDUCE_MAX and other are defined in "opencv2/core/core_c.h" file.
+        CV_REDUCE_SUM = 0
+        CV_REDUCE_AVG = 1
+        CV_REDUCE_MAX = 2
+        CV_REDUCE_MIN = 3
+    
 # Vector Methods:
     ### Modifiers:
         - push_back(val) --> add e/t
