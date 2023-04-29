@@ -85,7 +85,7 @@
         - end():
     ### Capacity:
         - size(): v.size()
-        - max_size(): v.max_size()
-        - capacity(): v.capacity()
+        - max_size(): v.max_size(), same as v.size()
+        - capacity(): v.capacity(), occupiesd + empty slots
         - empty(): v.empty()
     
