@@ -71,6 +71,13 @@
         - cout<<"R numpy "<<endl<<format(R, "numpy")<<endl<<endl;
         - cout<<"R csv"<<endl<<format(R, "csv")<<endl<<endl;
         - cout<<"R c"<<endl<<format(R, "c")<<endl<<endl;
+    - Release
+        - Mat src = imread("1.tif");
+            src.release(); // free mem
+        - Mfloat* data = new float[100 * 100];
+            Mat src(100, 100, CV_32FC1, data);
+            src.release(); // will not free memory
+            delete [] data;
 # Vector Methods:
     ### Modifiers:
         - push_back(val) --> add e/t
