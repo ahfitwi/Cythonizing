@@ -107,4 +107,135 @@
         - max_size(): v.max_size(), same as v.size()
         - capacity(): v.capacity(), occupiesd + empty slots
         - empty(): v.empty()
+# Valarray
+    - #include<valarray>
+    - #include<vector>
+    - It is designed to hold an array of values, and easily perform mathematical operations on them. 
+    - It also allows special mechanisms to refer to subsets of elements in the arrays.
+    - Declaration: ***template <class T> class valarray;***
+    - Operators: apply, cshift, max, min, resize, shift(+/-), size, sum, swap, begin, end,
+    - To create a valarray from a vector: std::valarray<double> corpX(corps_tmp[i].data(), corps_tmp[i].size());
+    - Back into a vector:corps_tmp[i].assign(std::begin(corpX), std::end(corpX));
     
+    
+    #include<iostream>
+#include<valarray>
+#include<vector>
+
+
+using namespace std;
+
+                    int main()
+                    {
+                        std::valarray<int> a { 1, 2, 3, 4, 5};
+                        std::valarray<int> b = a;
+                        std::valarray<int> c = a + b;
+
+                        std::valarray<bool> a1 { true, false};
+                        std::valarray<bool> b2 {false, true};
+                        std::valarray<bool> c2 = a and b;
+
+                        for(int i =0; i< c2.size();i++)
+                        {
+                            cout<<c2[i]<<endl;
+                        }
+                        //o create a valarray from a vector:
+                        //std::valarray<int> varr(a.data(), a.size());
+                        //To write the data back into a vector:
+                        //b.assign(std::begin(varr), std::end(varr));
+
+                        return 0;
+                    }
+    
+    
+                    // Valarray Operators
+                    #include<iostream>
+                    #include<valarray> // for valarray functions
+                    using namespace std;
+                    int main()
+                    {
+                        // Initializing valarray
+                        valarray<int> varr = { 10, 2, 20, 1, 30 };
+
+                        // Declaring new valarray
+                        valarray<int> varr1 ;
+
+                        // Using apply() to increment all elements by 5
+                        varr1 = varr.apply([](int x){return x=x+5;});
+
+                        // Displaying new elements value
+                        cout << "The new valarray with manipulated values is : ";
+                        for (int &x: varr1) cout << x << " ";
+                        cout << endl;
+
+                        // Displaying sum of both old and new valarray
+                        cout << "The sum of old valarray is : ";
+                        cout << varr.sum() << endl;
+                        cout << "The sum of new valarray is : ";
+                        cout << varr1.sum() << endl;
+
+                        // Displaying largest element of valarray
+                        cout << "The largest element of valarray is : ";
+                        cout << varr.max() << endl;
+
+                        // Displaying smallest element of valarray
+                        cout << "The smallest element of valarray is : ";
+                        cout << varr.min() << endl;
+
+                        // using shift() to shift elements to left
+                        // shifts valarray by 2 position
+                        varr1 = varr.shift(2);
+
+                        // Displaying elements of valarray after shifting
+                        cout << "The new valarray after shifting is : ";
+                        for ( int&x : varr1) cout << x << " ";
+                        cout << endl;
+
+                        // using cshift() to circularly shift elements to right
+                        // rotates valarray by 3 position
+                        varr1 = varr.cshift(-3);
+
+                        // Displaying elements of valarray after circular shifting
+                        cout << "The new valarray after circular shifting is : ";
+                        for ( int&x : varr1) cout << x << " ";
+                        cout << endl;
+
+
+                        // Initializing 1st valarray
+                        valarray<int> varr3 = {1, 2, 3, 4};
+
+                        // Initializing 2nd valarray
+                        valarray<int> varr4 = {2, 4, 6, 8};
+
+                        // Displaying valarrays before swapping
+                        cout << "The contents of 1st valarray "
+                                "before swapping are : ";
+                        for (int &x : varr3)
+                            cout << x << " ";
+                        cout << endl;
+                        cout << "The contents of 2nd valarray "
+                                "before swapping are : ";
+                        for (int &x : varr4)
+                            cout << x << " ";
+                        cout << endl;
+
+                        // Use of swap() to swap the valarrays
+                        varr1.swap(varr4);
+
+                        // Displaying valarrays after swapping
+                        cout << "The contents of 1st valarray "
+                                "after swapping are : ";
+                        for (int &x : varr3)
+                            cout << x << " ";
+                        cout << endl;
+
+                        cout << "The contents of 2nd valarray "
+                                "after swapping are : ";
+                        for (int &x : varr4)
+                            cout << x << " ";
+                        cout << endl;
+
+                        return 0;
+
+                    }
+
