@@ -107,6 +107,21 @@
         - max_size(): v.max_size(), same as v.size()
         - capacity(): v.capacity(), occupiesd + empty slots
         - empty(): v.empty()
+    ### Divide vector by Scalar
+        - transform(v.begin(), v.end(), v.begin(), [k](int &c){ return c/k; });
+            
+            void DivideVectorByScalar(vector<int> &v, int k){
+                 transform(v.begin(), v.end(), v.begin(), [k](int &c){ return c/k; });
+              }
+        - for_each(v.begin(), v.end(), [k](int &c){ c /= k; });
+            
+            void DivideVectorByScalar(vector<int> &v, int k){
+                for_each(v.begin(), v.end(), [k](int &c){ c /= k; });
+            }
+        - Method 3: Loop
+
+            for(int i=0;i<v.size();++i)
+                v[i] = v[i] / k;
 # Valarray
     - #include<valarray>
     - #include<vector>
